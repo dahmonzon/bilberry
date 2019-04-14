@@ -1,0 +1,26 @@
+{% extends '../layouts/base.html' %}
+
+{% block content %}
+    {% if success != None %}
+    <div class="success-body">
+       <p class="success-text"> {{success}} </p>
+       <p> click here to back  <a href="{% url 'home'%}">home</a> </p>
+       <p>click here to  see  <a href="{% url 'uncheckedImages'%}">unchecked Images</a> </p>
+       <p>click here to    <a href="{% url 'upload'%}"> upload a new  Images</a> </p>
+    </div>
+    {% else %}
+            <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <p>
+                <label for="nom">Nom :</label><br/>
+                <input id="nom" type="text" name="nom" placeholder="Ex: plage">
+            </p>
+            <p>
+                <label for="photo">Photo :</label><br/>
+                <input id="photo" type="file" name="images" placeholder="choisissez votre photo">
+            </p>   
+
+            <button type="submit" >Save</button>
+        </form>
+    {% endif %}
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends '../layouts/base.html' %}
+
+{% block content %}
+      <div class="home-pages-body">   
+       <div class="checked-images-body">
+              {% for image in images %}
+                     <div class="items-checked-image">  
+                            <a href=" {% url 'oneItem' id=image.id %}"><img src="{{image.images.url}}" alt="myImage" width='500px' height='500px'></a>
+                     </div>
+              {% empty %}
+                     <p>Sorry, you have already checked all unchecked image !!!  <a href="{% url 'home'%}">Click here to back Home</a> </p>
+              {% endfor %}
+       </div>
+     </div>  
+{% endblock content %}

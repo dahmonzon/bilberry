@@ -1,0 +1,17 @@
+{% extends '../layouts/base.html' %}
+
+{% block content %}
+{% if image == None %}
+    <h1>Ooops you have already seen all unchecked images <a href="{% url 'home' %}"> click here for home </a></h1>
+{% else %}
+<div class="one-item-body">
+         <img src={{image.images.url}} alt="une image" width='650px' height='600'>
+
+         <div class="item-choose">
+                <a class="reject" href="{% url 'treate' action='reject' id=image.id %}"> reject</a>
+                <a class="keept" href="{% url 'treate' action='keept' id=image.id %}"> Keept</a>
+         </div>
+</div>
+{% endif %}
+
+{% endblock content %}
