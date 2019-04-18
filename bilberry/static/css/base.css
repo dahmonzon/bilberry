@@ -47,9 +47,13 @@ nav ul li {
     display: inline;
 }
 
-.menu:hover , .menu:active {
-    background-color: black;
+.menu:hover {
+    background-color: rgba(66, 65, 65, 0.288);
     color: white ;
+}
+
+.active {
+    border-bottom: 3px solid black ;
 }
 
 /* ##################### For home.html ################# */

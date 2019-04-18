@@ -1,5 +1,5 @@
 {% extends '../layouts/base.html' %}
-
+{% load static %}
 {% block content %}
 {% if image == None %}
     <h1>Ooops you have already seen all unchecked images <a href="{% url 'home' %}"> click here for home </a></h1>
@@ -8,10 +8,12 @@
          <img src={{image.images.url}} alt="une image" width='650px' height='600'>
 
          <div class="item-choose">
-                <a class="reject" href="{% url 'treate' action='reject' id=image.id %}"> reject</a>
+                {% comment %} <button class="reject" onclick="setImageAsReject()">Reject</button>
+                <button class="keept"onclick="setImageAsKeept()">Keept</button> {% endcomment %}
+                <a class="reject" href="{% url 'treate' action='reject' id=image.id %}"> Reject</a>
                 <a class="keept" href="{% url 'treate' action='keept' id=image.id %}"> Keept</a>
          </div>
+          {% comment %} <script src=" {% static 'javascript/onePerPage.js' %} "></script> {% endcomment %}
 </div>
 {% endif %}
-
 {% endblock content %}
