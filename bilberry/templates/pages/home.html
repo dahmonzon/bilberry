@@ -1,11 +1,30 @@
 {% extends '../layouts/base.html' %}
+{% load static %}
 {% block content %}
     <div class="home-pages-body">   
+       </div class="home">
+              <h1>Welcome to our new web site </h1>
 
-              <h2>Number of Images :      {{allImages}}</h2>
-              <h2>Number of keept Images :      {{KeeptImages}}</h2>
-              <h2>Number of reject Images :      {{rejectImages}}</h2>
-              <h2>Number of unchecked Images :      {{uncheckedImages}}</h2>
+              <table>
+                     <tr>
+                            <td>Number of Images </td>
+                            <td>{{allImages}}</td>
+                     </tr>
+                     <tr>
+                            <td>Number of keept Images  </td>
+                            <td>{{KeeptImages}}</td>
+                     </tr>
+                     <tr>
+                            <td>Number of reject Images  </td>
+                            <td>{{rejectImages}}</td>
+                     </tr>
+                     <tr>
+                            <td>Number of unchecked Images </td>
+                            <td>{{uncheckedImages}}</td>
+                     </tr>
+              </table>
 
+              <a href="{% url 'AllImages' %}">get All Images</a>
+         </div>
      </div>  
 {% endblock content %}

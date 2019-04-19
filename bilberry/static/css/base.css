@@ -64,6 +64,23 @@ nav ul li {
     justify-content: start ;
 }
 
+.home {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around ;
+}
+
+td {
+    font-size: 1.4em ;
+}
+
+.home a {
+    font-size: 1.5em;
+    background-color: #4682B4;
+    color: white ;
+
+}
+
 .checked-images-body {
     width: 600px;
     padding-top: 5px ;

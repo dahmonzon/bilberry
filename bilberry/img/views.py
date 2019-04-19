@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from img.models import Images
-from django.http import Http404 ,HttpResponse ,HttpResponseNotFound
+from django.http import  HttpResponse ,HttpResponseNotFound
 
 # unchecked image controleur for displaying all unchecked images
 def AllImages(request):
@@ -30,7 +30,7 @@ def showOneItem(request,id):
     try:
         image = Images.objects.get(pk=id)
     except:
-        raise Http404()
+        return render(request, 'pages/404.html')
     return render(request, 'pages/oneitem.html',{'image': image})
 
 # controleur for handle reject or keept querry 
