@@ -10,5 +10,5 @@ urlpatterns = [
     path('oneItem/<int:id>',views.showOneItem, name='oneItem'), # path to display one item page
     path('treate/<str:action>/<int:id>',views.treateImage, name='treate'), #path to response treatement action
     path('upload/', views.uploadImage,name='upload'), # path to display upload new image page
-    path('',views.uncheckedImage,name='uncheckedImages'), # path to display unchecked image
+    path('',views.AllImages,name='AllImages'), # path to display unchecked image
 ]

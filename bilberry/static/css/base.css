@@ -65,16 +65,28 @@ nav ul li {
 }
 
 .checked-images-body {
-    width: 500px;
+    width: 600px;
     padding-top: 5px ;
     overflow-y: scroll ;
     overflow-x: hidden ;
 }
 
 .items-checked-image {
-    width: 500px;
-    height: 500px;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: start ;
+    width: 600px;
+    height: 540px;
     margin-bottom: 5px;
+    border-bottom : 1px solid blue ;
+}
+
+.item-detaille {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-around;
 }
 
 /* ###################### upload new images  ########################## */
