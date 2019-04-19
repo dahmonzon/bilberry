@@ -36,15 +36,20 @@ def showOneItem(request,id):
 # controleur for handle reject or keept querry 
 def treateImage(request,action,id):
     img = Images.objects.get(pk=id)
-    # if img.verified == True:
-    #     return render(request, 'pages/all.html')
     if action == 'reject': # by default keept
         img.reject = True 
+    else:
+        img.reject = False
     img.verified = True
     img.save()
-    return HttpResponse()
+    _id = id + 1
+    try:
+        images = Images.objects.get(id=_id)
+    except:
+        return HttpResponse(0)
+    return HttpResponse(images.id)
     # try:
-    #    image = Images.objects.filter(verified=False)
+    #    image = Images.objects.get(pk=id+1)
     #    if len(image) == 0:
     #        image = None
     #        return render(request, 'pages/oneItem.html', {'image': image})
