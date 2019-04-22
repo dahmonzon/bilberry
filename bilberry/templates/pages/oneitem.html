@@ -1,5 +1,8 @@
 {% extends '../layouts/base.html' %}
-{% load static %}
+{% load staticfiles %}
+{% block style%}
+       <link rel="stylesheet" type='text/css' href="{% static 'css/oneitem.css' %}">
+{% endblock%}
 {% block content %}
 {% if image == None %}
     <h1>Ooops you have already seen all unchecked images <a href="{% url 'home' %}"> click here for home </a></h1>

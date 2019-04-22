@@ -1,14 +1,17 @@
 {% extends '../layouts/base.html' %}
-
+{% load staticfiles %}
+{% block style%}
+       <link rel="stylesheet" type='text/css' href="{% static 'css/all.css' %}">
+{% endblock%}
 {% block content %}
       <div class="home-pages-body">   
        <div class="checked-images-body">
               {% for image in images %}
                      <div class="items-checked-image">  
                             <div class="item-detaille">
-                                   <h4>Upload : {{image.created}}</h4>
-                                   <h4>Reject : {{image.reject}}</h4>
-                                   <h4>Checked: {{image.verified}}</h4>
+                                   <p><h4>Upload : </h4> {{image.created}} </p>
+                                   <p><h4>Reject : </h4> {{image.reject}}<p>
+                                   <p><h4>Checked: </h4> {{image.verified}}<p>
                             </div>
                             <a href=" {% url 'oneItem' id=image.id %}"><img src="{{image.images.url}}" alt="myImage" width='600px' height='500px'></a>
                      </div>

@@ -1,9 +1,13 @@
 {% extends '../layouts/base.html' %}
-{% load static %}
+{% load staticfiles %}
+{% block style%}
+       <link rel="stylesheet" type='text/css' href="{% static 'css/home.css' %}">
+{% endblock%}
 {% block content %}
+    <style type="text/css" ></style>   
     <div class="home-pages-body">   
-       </div class="home">
-              <h1>Welcome to our new web site </h1>
+       <div class="home">
+              <h1>Welcome to our  web site </h1>
 
               <table>
                      <tr>
@@ -24,7 +28,7 @@
                      </tr>
               </table>
 
-              <a href="{% url 'AllImages' %}">get All Images</a>
+              <a href="{% url 'AllImages' %}">Browse All Images</a>
          </div>
      </div>  
 {% endblock content %}

@@ -1,5 +1,8 @@
 {% extends '../layouts/base.html' %}
-
+{% load staticfiles %}
+{% block style%}
+       <link rel="stylesheet" type='text/css' href="{% static 'css/upload.css' %}">
+{% endblock%}
 {% block content %}
     {% if success != None %}
     <div class="success-body">

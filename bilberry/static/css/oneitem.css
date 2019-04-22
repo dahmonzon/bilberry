@@ -1,0 +1,25 @@
+.one-item-body {
+    display: flex ;
+    flex-direction: row ;
+}
+
+.item-choose {
+    display: flex ;
+    flex-direction: row ;
+    justify-content: center ;
+    align-items: center ;
+}
+.item-choose button {
+    text-decoration:  none ;
+    padding: 10px 40px 10px 40px ;
+    color: white ;
+    font-size: 0.9em ;
+    margin: 0px 10px 0px 10px ;
+}
+
+.reject {
+    background-color: red ;
+}
+.keept {
+    background-color: green ;
+}

@@ -1,0 +1,38 @@
+.home-pages-body {
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around ;
+    height: 500px;
+}
+
+td {
+    font-size: 1.4em ;
+    padding: 10px 20px ;
+}
+.home table {
+    border-collapse: collapse ;
+}
+
+.home table tr td, .home table tr , .home table {
+    border: .5px solid gray ; 
+}  
+
+.home h1 {
+    color: gray;
+}
+
+.home a {
+    font-size: 1.1em;
+    background-color: rgb(148, 83, 9);
+    text-align: center;
+    color: white ;
+    padding: 10px 0px;
+    text-decoration: none;
+}
